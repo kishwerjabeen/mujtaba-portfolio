@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`page bg-site text-white bg-cover bg-no-repeat `}>
         <TopLeftImg/>
         <Navbar/>
         {children}</body>
