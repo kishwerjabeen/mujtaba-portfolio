@@ -31,6 +31,7 @@ export default function RootLayout({
       <body className={"page bg-site text-white bg-cover bg-no-repeat ${sora.vaiable} font-sora relative "}>
         <TopLeftImg/>
         <Navbar/>
+        
         {children}</body>
     </html>
   )

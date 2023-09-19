@@ -1,0 +1,31 @@
+"use client"
+
+import React from 'react';
+import { AppProps } from 'next/app';
+import { usePathname } from 'next/navigation'
+import Transition from '../components/Transition';
+
+// Import necessary modules from framer-motion
+import { AnimatePresence, motion } from 'framer-motion';
+
+// Define the props for the custom App component
+interface MyAppProps extends AppProps {
+  // Add any additional props you want to pass to the App component here
+}
+
+const MyApp: React.FC<MyAppProps> = ({ Component, pageProps }) => {
+  const pathname = usePathname()
+
+  return (
+    <div>
+      <AnimatePresence mode='wait'>
+        <motion.div key={pathname.path} className='h-full'>
+          <Transition />
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+export default MyApp;

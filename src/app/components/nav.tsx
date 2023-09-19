@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 
@@ -37,7 +37,11 @@ export const navData = [
 
 const Nav = () => {
   const pathname = usePathname()
+  const [activeLink, setActiveLink] = useState(null);
 
+  const handleLinkClick = (path: React.SetStateAction<null>) => {
+    setActiveLink(path);
+  };
   return (
     <nav className='flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen '>
 

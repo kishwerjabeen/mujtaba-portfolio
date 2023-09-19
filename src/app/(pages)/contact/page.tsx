@@ -1,5 +1,7 @@
+import Transition from "@/app/components/Transition";
+
 const Contact = () => {
-  return <div>Confddfddftact</div>;
+  return <div><Transition /></div>;
 };
 
 export default Contact;
